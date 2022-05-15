@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Nacionalidade</h1>
+    Digite seu país natal: <input type="text" name="nac" id="nac">
+    <input type="button" value="Enviar" onclick="determinar()">
+    <div id="res"></div>
+
+    <script>
+        function determinar(){
+            var nac1 = window.document.getElementById('nac').value
+            var res = window.document.querySelector('div#res')
+            res.innerHTML = (`Voce nasceu em ${nac1}.`)
+            if (nac1 == 'Brasil'){
+                res.innerHTML += '<p>Vc é Brasileiro.'
+            } else {
+                res.innerHTML += '<p>Vc é Estrangeiro'
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
